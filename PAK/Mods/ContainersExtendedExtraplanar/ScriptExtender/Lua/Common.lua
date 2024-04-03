@@ -1,0 +1,25 @@
+ExtraplanarContainerStatus = "EXTRAPLANAR_CONTAINER"
+ExtraplanarStorageStatus = "EXTRAPLANAR_STORAGE"
+ContainersList = {
+    "CONT_GEN_AlchemyPouch",
+    "CONT_GEN_CampSupplySack",
+    "CONT_GEN_Keychain",
+    "OBJ_ContainersExtended_ArmorCrate",
+    "OBJ_ContainersExtended_BookBag",
+    "OBJ_ContainersExtended_CoatingsCase",
+    "OBJ_ContainersExtended_CoinSack",
+    "OBJ_ContainersExtended_Coffin",
+    "OBJ_ContainersExtended_DyeRack",
+    "OBJ_ContainersExtended_ExplosivesBarrel",
+    "OBJ_ContainersExtended_GrenadeContainer",
+    "OBJ_ContainersExtended_InstrumentsCase",
+    "OBJ_ContainersExtended_JewelryBox",
+    "OBJ_ContainersExtended_PotionCase",
+    "OBJ_ContainersExtended_Quiver",
+    "OBJ_ContainersExtended_ScrollCase",
+    "OBJ_ContainersExtended_ShieldsCrate",
+    "OBJ_ContainersExtended_StoryItems",
+    "OBJ_ContainersExtended_TeddyBear",
+    "OBJ_ContainersExtended_Wardrobe",
+    "OBJ_ContainersExtended_WeaponsCrate",
+}
