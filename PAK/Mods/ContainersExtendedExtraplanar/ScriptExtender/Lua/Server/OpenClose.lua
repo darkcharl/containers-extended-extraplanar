@@ -34,9 +34,11 @@ local function OpenedHandler(object)
     end
 end
 
-local function MainEventRouter(object, eventId)
-    if eventId == "ContainerOpen" then
-        print("-- triggered item on ContainerOpen:", object)
+local function OpenEventHandler(object, eventID)
+    if eventID == "ContainerOpen" then
+        if debugMode then
+            print("-- triggered item on ContainerOpen:", object)
+        end
         if HasActiveStatus(object, ExtraplanarStorageStatus) == 0 then
             ApplyStatus(object, ExtraplanarStorageStatus, -1)
         end
@@ -46,4 +48,4 @@ end
 -- Opened and closed seem to trigger the other way around, super confusing
 Ext.Osiris.RegisterListener("Closed", 1, "before", OpenedHandler)
 Ext.Osiris.RegisterListener("Opened", 1, "before", ClosedHandler)
-Ext.Osiris.RegisterListener("EntityEvent", 2, "after", MainEventRouter)
+Ext.Osiris.RegisterListener("EntityEvent", 2, "after", OpenEventHandler)
