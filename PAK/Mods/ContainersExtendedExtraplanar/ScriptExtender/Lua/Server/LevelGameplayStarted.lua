@@ -31,6 +31,5 @@ local function InventoryCheckHandler(object, eventID)
     end
 end
 
--- Gameplay started
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", LevelGameplayStartedHandler)
 Ext.Osiris.RegisterListener("EntityEvent", 2, "after", InventoryCheckHandler)
