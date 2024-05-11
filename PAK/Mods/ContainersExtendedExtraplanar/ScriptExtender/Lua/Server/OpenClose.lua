@@ -11,10 +11,7 @@ local function ClosedHandler(object)
     end
 
     if InArray(GetObjectName(object), ContainersList) then
-        if HasActiveStatus(object, ExtraplanarContainerStatus) == 0 then
-            ApplyStatus(object, ExtraplanarContainerStatus, -1)
-        end
-        
+        ApplyNewStatus(object, ExtraplanarContainerStatus)
         IterateInventory(object, "ContainerClose", "ContainerCloseFinished")
     end
 end
@@ -26,10 +23,7 @@ local function OpenedHandler(object)
     end
 
     if InArray(GetObjectName(object), ContainersList) then
-        if HasActiveStatus(object, ExtraplanarContainerStatus) == 0 then
-            ApplyStatus(object, ExtraplanarContainerStatus, -1)
-        end
-
+        ApplyNewStatus(object, ExtraplanarContainerStatus)
         IterateInventory(object, "ContainerOpen", "ContainerOpenFinished")
     end
 end
@@ -39,9 +33,7 @@ local function OpenEventHandler(object, eventID)
         if debugMode then
             print("-- triggered item on ContainerOpen:", object)
         end
-        if HasActiveStatus(object, ExtraplanarStorageStatus) == 0 then
-            ApplyStatus(object, ExtraplanarStorageStatus, -1)
-        end
+        ApplyNewStatus(object, ExtraplanarStorageStatus)
     end
 end
 

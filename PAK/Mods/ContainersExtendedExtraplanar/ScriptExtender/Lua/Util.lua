@@ -39,3 +39,15 @@ function GetObjectName(name, sep, ntags)
 
     return table.concat(t, "_")
 end
+
+function ApplyNewStatus(object, status)
+    if HasActiveStatus(object, status) == 0 then
+        ApplyStatus(object, status, -1)
+    end
+end
+
+function RemoveExistingStatus(object, status)
+    if HasActiveStatus(object, status) == 1 then
+        RemoveStatus(object, status)
+    end
+end

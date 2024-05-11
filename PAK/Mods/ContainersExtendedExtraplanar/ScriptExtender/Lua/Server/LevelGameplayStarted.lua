@@ -18,14 +18,12 @@ local function InventoryCheckHandler(object, eventID)
         if debugMode then
             print("-- InventoryCheck triggered")
         end
+        
         if InArray(GetObjectName(object), ContainersList) then
             if debugMode then
                 print("Container found:", object)
-            end    
-            if HasActiveStatus(object, ExtraplanarContainerStatus) == 0 then
-                ApplyStatus(object, ExtraplanarContainerStatus, -1)
             end
-
+            ApplyNewStatus(object, ExtraplanarContainerStatus)
             IterateInventory(object, "ContainerOpen", "ContainerOpenFinished")
         end
     end

@@ -8,7 +8,6 @@ local function LongRestFinishedHandler()
     if debugMode then
         print('-- LongRestFinishedHandler')
         print('Character:', character)
-
     end
 
     IterateInventory(character, "InventoryCheck", "InventoryCheckFinished")

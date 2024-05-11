@@ -13,7 +13,7 @@ local function AddedToHandler(object, inventoryHolder, addType)
 
     -- apply ExtraplanarStorageStatus if its into one of the containers of containersList
     if InArray(GetObjectName(inventoryHolder), ContainersList) then
-        ApplyStatus(object, ExtraplanarStorageStatus, -1)
+        ApplyNewStatus(object, ExtraplanarStorageStatus)
     end
 end
 
@@ -24,9 +24,7 @@ local function RemovedFromHandler(object, inventoryHolder)
         print('Inventory holder: ', inventoryHolder)
     end
 
-    if HasActiveStatus(object, ExtraplanarStorageStatus) == 1 then
-        RemoveStatus(object, ExtraplanarStorageStatus)
-    end
+    RemoveExistingStatus(object, ExtraplanarStorageStatus)
 end
 
 Ext.Osiris.RegisterListener("AddedTo", 3, "after", AddedToHandler)
