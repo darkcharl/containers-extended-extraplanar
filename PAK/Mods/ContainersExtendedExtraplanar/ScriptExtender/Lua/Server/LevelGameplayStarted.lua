@@ -8,6 +8,7 @@ local function LevelGameplayStartedHandler(levelName, isEditorMode)
     if debugMode then
         print('-- LevelGameplayStartedHandler')
         print('Character:', character)
+        print('Level name:', levelName)
     end
 
     IterateInventory(character, "InventoryCheck", "InventoryCheckFinished")

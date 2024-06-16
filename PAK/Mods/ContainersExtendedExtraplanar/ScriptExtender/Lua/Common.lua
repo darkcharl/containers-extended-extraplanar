@@ -4,6 +4,7 @@ ContainersList = {
     "CONT_GEN_AlchemyPouch",
     "CONT_GEN_CampSupplySack",
     "CONT_GEN_Keychain",
+    "OBJ_ContainersExtended_AdventuringTools",
     "OBJ_ContainersExtended_ArmsChest",
     "OBJ_ContainersExtended_ArmorCrate",
     "OBJ_ContainersExtended_BagOfHolding",
