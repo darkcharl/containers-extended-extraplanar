@@ -9,6 +9,7 @@ ContainersList = {
     "OBJ_ContainersExtended_ArmorChest",
     "OBJ_ContainersExtended_BagOfHolding",
     "OBJ_ContainersExtended_BookBag",
+    "OBJ_ContainersExtended_CloakBox",
     "OBJ_ContainersExtended_CoatingsCase",
     "OBJ_ContainersExtended_CoinSack",
     "OBJ_ContainersExtended_Coffin",
