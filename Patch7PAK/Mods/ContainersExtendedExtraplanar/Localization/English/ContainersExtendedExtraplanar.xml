@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="415570b9-5c91-4950-a09c-62361286ea95" version="1">Extraplanar Storage</content>
+	<content contentuid="7b64011d-92ad-41b4-a316-4208374fd1bb" version="1">This item is stored in a pocket dimension and does not add any carry weight.</content>
+
+	<content contentuid="135ba362-f393-42f1-8e74-ef45887c69d3" version="1">Extraplanar Container</content>
+	<content contentuid="b0cc90a0-cfe9-474a-8dd3-5b7429ace1e4" version="1">This item is a magically enhanced, weight reduced container that stores items in a pocket dimension. The items it carries no longer add to the weight carry limit. Additionally, the container can be shrunk on demand to the size of small jewelry box.</content>
+</contentList>
