@@ -4,7 +4,7 @@ data "StatusType" "BOOST"
 data "DisplayName" "415570b9-5c91-4950-a09c-62361286ea95;1"
 data "Description" "7b64011d-92ad-41b4-a316-4208374fd1bb;1"
 data "Icon" "Spell_Transmutation_Knock"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;ApplyToDead"
 data "Boosts" "Weight(-500)"
 
 new entry "EXTRAPLANAR_CONTAINER"
