@@ -1,0 +1,25 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+AddedTo(_Item, _Container, _)
+AND
+IsContainer((ITEM)_Container, 1)
+AND
+IsTagged((ITEM)_Container, (TAG)EXTRAPLANARCONTAINER_8bbc5e54-e381-4526-b082-4d85fc510d15, 1)
+THEN
+ApplyStatus((ITEM)_Item, "EXTRAPLANAR_STORAGE", -1.0, 1, NULL_00000000-0000-0000-0000-000000000000);
+
+IF
+RemovedFrom(_Item, _Container)
+AND
+IsContainer((ITEM)_Container, 1)
+AND
+IsTagged((ITEM)_Container, (TAG)EXTRAPLANARCONTAINER_8bbc5e54-e381-4526-b082-4d85fc510d15, 1)
+THEN
+RemoveStatus((ITEM)_Item, "EXTRAPLANAR_STORAGE");
+EXITSECTION
+
+ENDEXITSECTION
