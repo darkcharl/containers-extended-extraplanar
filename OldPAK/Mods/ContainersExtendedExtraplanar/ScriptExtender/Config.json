@@ -1,5 +1,0 @@
-{
-  "RequiredVersion": 15,
-  "ModTable": "ContainersExtendedExtraplanar",
-  "FeatureFlags": ["Osiris", "Lua"]
-}
