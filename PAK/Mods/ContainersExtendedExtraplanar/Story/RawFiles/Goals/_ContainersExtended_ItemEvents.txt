@@ -14,6 +14,7 @@ IsTagged((ITEM)_Container, (TAG)EXTRAPLANARCONTAINER_8bbc5e54-e381-4526-b082-4d8
 THEN
 ApplyStatus((ITEM)_Item, "EXTRAPLANAR_STORAGE", -1.0, 1, NULL_00000000-0000-0000-0000-000000000000);
 
+
 IF
 RemovedFrom(_Item, _Container)
 AND
@@ -24,6 +25,34 @@ AND
 IsTagged((ITEM)_Container, (TAG)EXTRAPLANARCONTAINER_8bbc5e54-e381-4526-b082-4d85fc510d15, 1)
 THEN
 RemoveStatus((ITEM)_Item, "EXTRAPLANAR_STORAGE");
+
+
+IF LevelGameplayStarted(_,_)
+AND
+DB_Players(_Player)
+THEN
+IterateInventory(_Player, "ContainersExtended_ApplyContainer", "ContainersExtended_ApplyContainerDone");
+
+
+IF
+EntityEvent(_Container, "ContainersExtended_ApplyContainer")
+AND
+IsContainer((ITEM)_Container, 1)
+AND
+IsTagged((ITEM)_Container, (TAG)EXTRAPLANARCONTAINER_8bbc5e54-e381-4526-b082-4d85fc510d15, 1)
+THEN
+IterateInventory(_Container, "ContainersExtended_ApplyItem", "ContainersExtended_ApplyItemDone");
+
+
+IF
+EntityEvent(_Item, "ContainersExtended_ApplyItem")
+AND
+IsItem((ITEM)_Item, 1)
+AND
+HasAppliedStatus((ITEM)_Item, "EXTRAPLANAR_STORAGE", 0)
+THEN
+ApplyStatus((ITEM)_Item, "EXTRAPLANAR_STORAGE", -1.0, 1, NULL_00000000-0000-0000-0000-000000000000);
+
 EXITSECTION
 
 ENDEXITSECTION
