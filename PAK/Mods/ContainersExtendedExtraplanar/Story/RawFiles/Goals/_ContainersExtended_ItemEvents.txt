@@ -34,6 +34,13 @@ THEN
 IterateInventory(_Player, "ContainersExtended_ApplyContainer", "ContainersExtended_ApplyContainerDone");
 
 
+IF LongRestFinished()
+AND
+DB_Players(_Player)
+THEN
+IterateInventory(_Player, "ContainersExtended_ApplyContainer", "ContainersExtended_ApplyContainerDone");
+
+
 IF
 EntityEvent(_Container, "ContainersExtended_ApplyContainer")
 AND
