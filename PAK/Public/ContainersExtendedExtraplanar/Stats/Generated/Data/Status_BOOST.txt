@@ -6,6 +6,8 @@ data "Description" "7b64011d-92ad-41b4-a316-4208374fd1bb;1"
 data "Icon" "Spell_Transmutation_Knock"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;ApplyToDead;IgnoreResting"
 data "Boosts" "Weight(-500)"
+data "StackId" "EXTRAPLANAR_STORAGE"
+data "StackPriority" "1"
 
 new entry "EXTRAPLANAR_CONTAINER"
 type "StatusData"
